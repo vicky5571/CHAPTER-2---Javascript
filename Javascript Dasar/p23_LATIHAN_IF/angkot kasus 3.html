@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var jmlAngkot = 10;
+      var angkotBeroperasi = 6;
+      var noAngkot = 1;
+
+      for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
+        if (noAngkot <= angkotBeroperasi && noAngkot !== 5) {
+          console.log("Angkot no. " + noAngkot + " telah beroperasi.");
+        } else if (noAngkot === 8 || noAngkot === 10 || noAngkot === 5) {
+          console.log("Angkot no. " + noAngkot + " sedang lembur.");
+        } else {
+          console.log("Angkot no. " + noAngkot + " tidak beroperasi.");
+        }
+      }
+    </script>
+  </body>
+</html>

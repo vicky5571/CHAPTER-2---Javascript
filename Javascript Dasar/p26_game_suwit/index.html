@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var ulang = true;
+      while (ulang) {
+        // Pilihan player
+        var player = prompt("Pilih : Batu, Gunting, Kertas");
+
+        // Pilihan computer
+        var comp = Math.random();
+        if (comp < 0.34) {
+          comp = "Batu";
+        } else if (comp >= 0.34 && comp < 0.67) {
+          comp = "Gunting";
+        } else {
+          comp = "Kertas";
+        }
+
+        //   Menentukan rules
+        var hasil = "";
+        if (player == comp) {
+          hasil = "SERI!";
+        } else if (player == "Batu") {
+          hasil = comp == "Gunting" ? "MENANG!" : "KALAH";
+        } else if (player == "Gunting") {
+          hasil = comp == "Batu" ? "KALAH!" : "MENANG!";
+        } else if (player == "Kertas") {
+          hasil = comp == "Batu" ? "MENANG!" : "KALAH!";
+        } else {
+          hasil = "Kamu memasukkan pilihan yang salah!";
+        }
+
+        alert("Kamu memilih : " + player + " dan Computer memilih : " + comp + "\n\n" + "KAMU " + hasil);
+        ulang = confirm("Apakah anda ingin bermain lagi?");
+      }
+
+      alert("Terima kasih sudah bermain!");
+    </script>
+  </body>
+</html>
